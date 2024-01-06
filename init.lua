@@ -1,0 +1,3 @@
+require("kagatto")
+
+print("Bienvenido :]")
