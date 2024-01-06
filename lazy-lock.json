@@ -1,0 +1,4 @@
+{
+  "dracula": { "branch": "master", "commit": "6495b4ff40479ec7705addb4ea800ec308026648" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" }
+}
