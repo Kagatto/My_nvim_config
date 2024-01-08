@@ -17,6 +17,7 @@ require('mason-lspconfig').setup({
 		'rust_analyzer',
 		'eslint',
 		'gopls',
+        'pyright',
 		-- 'html',
 		-- 'tailwindcss',
 	},
