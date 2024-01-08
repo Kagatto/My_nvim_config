@@ -13,7 +13,6 @@ vim.opt.autoindent = true
 -- UI config
 vim.opt.number = true
 vim.opt.relativenumber = true
--- vim.opt.splitbelow = true
 vim.opt.showmode = true
 vim.opt.termguicolors = true
 
