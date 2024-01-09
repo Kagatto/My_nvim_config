@@ -27,4 +27,7 @@ require('mason-lspconfig').setup({
 })
 
 require('lspconfig').clangd.setup({})
+-- require('lspconfig').html.setup({})
+-- require('lspconfig').tailwindcss.setup({})
+-- require('lspconfig').tsserver.setup({})
 
