@@ -1,6 +1,6 @@
 return {
 	-- Dracula Colorscheme
-    'dracula/vim', 
+    'dracula/vim',
     name = 'dracula',
     config = function()
         vim.cmd('colorscheme dracula')

@@ -34,5 +34,5 @@ return {
                 replace = nil,
             },
         },
-    }
+    },
 }

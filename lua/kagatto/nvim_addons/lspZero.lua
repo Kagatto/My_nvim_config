@@ -47,5 +47,5 @@ return {
         -- require('lspconfig').html.setup({})
         -- require('lspconfig').tailwindcss.setup({})
         -- require('lspconfig').tsserver.setup({})
-    end
+    end,
 }
