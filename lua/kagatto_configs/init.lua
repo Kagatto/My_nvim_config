@@ -1,7 +1,0 @@
--- require("kagatto_configs.cloak")
--- require("kagatto_configs.fugitive")
--- require("kagatto_configs.harpoon")
--- require("kagatto_configs.lspZero")
--- require("kagatto_configs.telescope")
--- require("kagatto_configs.treesitter")
--- require("kagatto_configs.undotree")
