@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>ee", function()
     if extension == 'go' then
         vim.api.nvim_feedkeys("oif err != nil {\n}\027k", 'n', true)
     elseif extension == 'cpp' then
-        vim.api.nvim_feedkeys("", 'n', true)
+        vim.api.nvim_feedkeys("otry {\n}\ncatch(...) {\n}\027kkk", 'n', true)
     else
         print("No hay para este lenguaje :[")
     end

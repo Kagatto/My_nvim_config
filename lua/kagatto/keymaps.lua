@@ -1,4 +1,6 @@
+-- Setting leader
 vim.g.mapleader = " "
+
 -- Quick :Ex command
 vim.keymap.set("n", "<leader>pp", vim.cmd.Ex)
 
@@ -32,3 +34,64 @@ vim.keymap.set("n", "<leader>tt", ":vsplit<CR> :terminal<CR>")
 vim.keymap.set("t", "<C-t>t", "<C-\\><C-n>:split .<CR><C-w>w :close<CR>")
 vim.keymap.set("t", "<C-t>c", "<C-\\><C-n>:split .<CR><C-w>w :close<CR>:close<CR>")
 
+-- Indent text
+vim.keymap.set("n", "<leader>==", function()
+    -- Obtiene el número de la ventana actual
+    local current_window = vim.api.nvim_get_current_win()
+    -- Obtiene la posición del cursor en la ventana actual
+    local cursor_position = vim.api.nvim_win_get_cursor(current_window)
+    -- El número de línea es el primer elemento de la tabla devuelta
+    local line_number = cursor_position[1]
+
+    vim.api.nvim_feedkeys("Vgg=VG=", 'n', true)
+    local command = ":" .. tostring(line_number) .. "\r"
+    vim.api.nvim_feedkeys(command, 'n', true)
+end)
+
+--[[
+local keymaps = {
+    n = {
+        { keys = "<leader>pp", action = "vim.cmd.Ex" },
+        { keys = "n", action = "nzz" },
+        { keys = "N", action = "Nzz" },
+        { keys = "Y", action = "y$" },
+        { keys = "<C-d>", action = "<C-d>zz" },
+        { keys = "<C-u>", action = "<C-u>zz" },
+        { keys = "<C-b>", action = "<C-b>zz" },
+        { keys = "<C-f>", action = "<C-f>zz" },
+        { keys = "<leader>y", action = "\"+y" },
+        { keys = "<leader>d", action = "\"_d" },
+        { keys = "<leader>tt", action = ":vsplit<CR> :terminal<CR>" },
+        { keys = "<leader>==", action = function()
+                -- Obtiene el número de la ventana actual
+                local current_window = vim.api.nvim_get_current_win()
+                -- Obtiene la posición del cursor en la ventana actual
+                local cursor_position = vim.api.nvim_win_get_cursor(current_window)
+                -- El número de línea es el primer elemento de la tabla devuelta
+                local line_number = cursor_position[1]
+
+                vim.api.nvim_feedkeys("Vgg=VG=", 'n', true)
+                local command = ":" .. tostring(line_number) .. "\r"
+                vim.api.nvim_feedkeys(command, 'n', true)
+            end
+        },
+    },
+    v = {
+        { keys = "J", action = ":m '>+1<CR>gv=gv" },
+        { keys = "K", action = ":m '<-2<CR>gv=gv" },
+        { keys = "<leader>y", action = "\"+y" },
+        { keys = "<leader>d", action = "\"_d" }
+    },
+    t = {
+        { keys = "<C-t>t", action = "<C-\\><C-n>:split .<CR><C-w>w :close<CR>" },
+        { keys = "<C-t>c", action = "<C-\\><C-n>:split .<CR><C-w>w :close<CR>:close<CR>" },
+    },
+}
+
+-- Configura cada asignación de teclas por modo
+for mode, mappings in pairs(keymaps) do
+    for _, mapping in ipairs(mappings) do
+        vim.keymap.set(mode, mapping.keys, mapping.action)
+    end
+end
+]]

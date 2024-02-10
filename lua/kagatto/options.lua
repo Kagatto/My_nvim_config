@@ -1,28 +1,39 @@
--- Mouse
-vim.opt.mouse = ''
+local options = {
+    -- Mouse
+    mouse = '',
 
--- Tab
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smarttab = true
-vim.opt.smartindent = true
-vim.opt.autoindent = true
+    -- Tab
+    tabstop = 4,
+    softtabstop = 4,
+    shiftwidth = 4,
+    expandtab = true,
+    smarttab = true,
+    smartindent = true,
+    autoindent = true,
 
--- UI config
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.showmode = true
-vim.opt.termguicolors = true
+    -- Other tabs
+    splitbelow = false,
+    splitright = true,
 
--- Searching
-vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.hlsearch = false
+    -- UI config
+    number = true,
+    relativenumber = true,
+    showmode = true,
+    termguicolors = true,
+    colorcolumn = "100",
 
--- Cursor
-vim.opt.scrolloff = 10
-vim.opt.cursorline = true
+    -- Searching
+    incsearch = true,
+    ignorecase = true,
+    smartcase = true,
+    hlsearch = false,
 
+    -- Cursor
+    scrolloff = 10,
+    cursorline = true,
+
+    -- Terminal
+    title = true,
+}
+
+for option, value in pairs(options) do vim.opt[option] = value end
