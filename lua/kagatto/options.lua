@@ -31,6 +31,7 @@ local options = {
     -- Cursor
     scrolloff = 10,
     cursorline = true,
+    cursorcolumn = true,
 
     -- Terminal
     title = true,
