@@ -30,13 +30,13 @@ return {
             -- Replace the language servers listed here 
             -- with the ones you want to install
             ensure_installed = {
-                -- 'tsserver',
+                'tsserver',
                 'rust_analyzer',
                 'eslint',
                 'gopls',
                 'pyright',
-                -- 'html',
-                -- 'tailwindcss',
+                'html',
+                'tailwindcss',
             },
             handlers = {
                 lsp_zero.default_setup,
