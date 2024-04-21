@@ -34,6 +34,7 @@ return {
                 'rust_analyzer',
                 'eslint',
                 'gopls',
+                'lua_ls',
                 'pyright',
                 'html',
                 'tailwindcss',

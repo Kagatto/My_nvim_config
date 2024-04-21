@@ -24,6 +24,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Use System clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
+    -- vim.keymap.set('v', '<leader>y', ':w !xclip -selection clipboard<CR><CR>')
+
+
 
 -- Use void register
 vim.keymap.set("n", "<leader>d", "\"_d")
