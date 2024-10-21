@@ -8,7 +8,11 @@ vim.keymap.set("n", "<leader>pp", vim.cmd.Ex)
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 
--- Copy until end of the line
+-- New line on normal mode
+vim.keymap.set("n", "<leader>o", "o<ESC>")
+vim.keymap.set("n", "<leader>O", "O<ESC>")
+
+-- Yank until end of the line
 vim.keymap.set("n", "Y", "y$")
 
 -- For quick and centered movement
@@ -22,11 +26,9 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Use System clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-    -- vim.keymap.set('v', '<leader>y', ':w !xclip -selection clipboard<CR><CR>')
-
-
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set('v', '<leader>y', ':w !xclip -selection clipboard<CR><CR>')
 
 -- Use void register
 vim.keymap.set("n", "<leader>d", "\"_d")
@@ -47,6 +49,6 @@ vim.keymap.set("n", "<leader>==", function()
     local line_number = cursor_position[1]
 
     vim.api.nvim_feedkeys("Vgg=VG=", 'n', true)
-    local command = ":" .. tostring(line_number) .. "\r"
+    local command = ":" .. tostring(line_number) .. "\r" .. "zz"
     vim.api.nvim_feedkeys(command, 'n', true)
 end)

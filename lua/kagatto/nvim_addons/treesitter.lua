@@ -1,3 +1,4 @@
+-- Vim required >= 0.9.2
 vim.opt.runtimepath:append("$HOME/.local/share/treesitter")
 
 return {

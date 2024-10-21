@@ -34,7 +34,7 @@ return {
                 'rust_analyzer',
                 'eslint',
                 'gopls',
-                'lua_ls',
+                -- 'lua_ls',
                 'pyright',
                 'html',
                 'tailwindcss',
@@ -45,8 +45,5 @@ return {
         })
 
         require('lspconfig').clangd.setup({})
-        -- require('lspconfig').html.setup({})
-        -- require('lspconfig').tailwindcss.setup({})
-        -- require('lspconfig').tsserver.setup({})
     end,
 }
