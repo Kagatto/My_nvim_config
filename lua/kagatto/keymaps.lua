@@ -26,11 +26,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Use System clipboard
--- vim.keymap.set("n", "<leader>y", "\"+y")
--- vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set('v', '<leader>y', ':w !xclip -selection clipboard<CR><CR>')
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
 
--- Use void register
+-- Delete without yank
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
@@ -52,3 +51,7 @@ vim.keymap.set("n", "<leader>==", function()
     local command = ":" .. tostring(line_number) .. "\r" .. "zz"
     vim.api.nvim_feedkeys(command, 'n', true)
 end)
+
+-- Format text
+vim.keymap.set("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format()<CR>")
+-- vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
