@@ -2,4 +2,4 @@
 require("kagatto.plugins_configs.harpoon")
 require("kagatto.plugins_configs.cloak")
 require("kagatto.plugins_configs.icons")
--- require("kagatto.plugins_configs.treesitter")
+require("kagatto.plugins_configs.treesitter")

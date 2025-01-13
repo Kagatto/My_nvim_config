@@ -1,6 +1,7 @@
 local options = {
     -- Mouse
-    mouse = '',
+    mouse = 'v',
+    mousemodel = 'popup',
 
     -- Tab
     tabstop = 4,
@@ -42,4 +43,3 @@ for option, value in pairs(options) do vim.opt[option] = value end
 vim.api.nvim_command('autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE')
 vim.api.nvim_command('autocmd VimEnter * hi NormalNC guibg=NONE ctermbg=NONE')
 vim.api.nvim_command('autocmd VimEnter * hi EndOfBuffer guibg=NONE ctermbg=NONE')
-
