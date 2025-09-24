@@ -21,7 +21,6 @@ local options = {
     relativenumber = true,
     showmode = true,
     termguicolors = true,
-    colorcolumn = "100",
 
     -- Searching
     incsearch = true,
@@ -36,6 +35,13 @@ local options = {
 
     -- Terminal
     title = true,
+
+    -- Line behavior
+    wrap = true,
+    -- textwidth = 100,
+    colorcolumn = '100',
+    linebreak = true,
+    breakindent = true,
 }
 
 for option, value in pairs(options) do vim.opt[option] = value end
