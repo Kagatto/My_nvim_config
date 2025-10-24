@@ -5,10 +5,9 @@ return {
     dependencies = {
         --- Uncomment these if you want to manage LSP servers from neovim
         {'williamboman/mason.nvim'},
-        {'williamboman/mason-lspconfig.nvim'},
 
         -- LSP Support
-        {'neovim/nvim-lspconfig'},
+        -- You will have to look more into this config basically
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},
         {'hrsh7th/cmp-nvim-lsp'},
@@ -26,24 +25,22 @@ return {
         end)
 
         require('mason').setup({})
-        require('mason-lspconfig').setup({
-            -- Replace the language servers listed here 
-            -- with the ones you want to install
-            ensure_installed = {
-                -- 'tsserver',
-                'rust_analyzer',
-                'eslint',
-                'gopls',
-                'pyright',
-                -- 'html',
-                -- 'tailwindcss',
-            },
-            handlers = {
-                lsp_zero.default_setup,
-            },
-        })
+        -- Replace the language servers listed here 
+        -- with the ones you want to install
+        --ensure_installed = {
+        --    'tsserver',
+        --    'rust_analyzer',
+        --    'eslint',
+        --    'gopls',
+        --    'pyright',
+        --    'html',
+        --    'tailwindcss',
+        -- },
+        --handlers = {
+        --    lsp_zero.default_setup,
+        --},
 
-        require('lspconfig').clangd.setup({})
+        -- require('lspconfig').clangd.setup({})
         -- require('lspconfig').html.setup({})
         -- require('lspconfig').tailwindcss.setup({})
         -- require('lspconfig').tsserver.setup({})
